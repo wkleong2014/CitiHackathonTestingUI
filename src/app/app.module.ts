@@ -10,6 +10,10 @@ import { NavigationBarComponent } from './navigation-bar/navigation-bar.componen
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TestReportComponent } from './test-report/test-report.component';
 
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +36,9 @@ import { TestReportComponent } from './test-report/test-report.component';
     MatMenuModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
