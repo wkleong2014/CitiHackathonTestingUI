@@ -18,7 +18,7 @@ export class TestReportComponent implements OnInit {
     subscription: Subscription;
 
     /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-    displayedColumns = ['timestamp', 'testUrl', 'runCount', 'failureCount', 'successCount'];
+    displayedColumns = ['timestamp', 'testUrl', 'component', 'runCount', 'failureCount', 'successCount'];
 
     constructor(private db: AngularFirestore) {
     }
