@@ -1,5 +1,5 @@
 export class Report {
-    timestamp: string;
+    timestamp: Date;
     testUrl: string;
     component: string;
     runCount: string;

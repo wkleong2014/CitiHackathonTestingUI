@@ -69,7 +69,7 @@ export class TestReportDataSource extends DataSource<Report> {
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'timestamp': return compare(+a.timestamp, +b.timestamp, isAsc);
+        case 'timestamp': return compare(+new Date(a.timestamp), +new Date(b.timestamp), isAsc);
         default: return 0;
       }
     });
